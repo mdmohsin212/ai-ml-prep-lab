@@ -1,12 +1,15 @@
-l = [1, 2, 3]
-d = {4:0, 9:1, 2:2}
+def modify_data(list_items, strings):
+    list_items.append(99)
+    strings = strings + " World"
+    
+    print("Inside Function - List:", list_items)
+    print("Inside Function - String:", strings)
+    print("-" * 20)
+    
 
-# s = {1, 2, 3}
+original_list = [1, 2, 3]
+original_string = "Hello"
+modify_data(original_list, original_string)
 
-l[1] = 99
-
-d[1] = 99
-
-print(l[1])
-print(d[1])
-print(d)
+print("Outside Function - List:", original_list)
+print("Outside Function - String:", original_string)
