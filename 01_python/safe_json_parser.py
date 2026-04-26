@@ -17,7 +17,7 @@ def safe_access(file_path, keys, default=None):
         return default
 
 
-email = safe_access("./data/info.json", ["personal_life", "contact", "email"])
+email = safe_access("./data/info.json", ["personal_info", "contact", "email"])
 print(email)
 
 
