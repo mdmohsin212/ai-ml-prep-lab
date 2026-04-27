@@ -8,4 +8,4 @@ def max_subarray(nums):
     return max_global
 
 
-print(max_subarray([1, 2, 5, 6, 2]))
+print(max_subarray([-2, 1, -3, 4, -1, 2, 1, -5, 4]))
