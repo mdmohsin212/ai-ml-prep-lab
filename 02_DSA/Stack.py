@@ -1,4 +1,4 @@
-class StackNode:
+class StackNode: # LIFO
     def __init__(self, value=0, next=None):
         self.value = value
         self.next = next

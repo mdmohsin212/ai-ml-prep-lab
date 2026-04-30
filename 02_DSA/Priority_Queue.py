@@ -8,5 +8,24 @@ class PriorityQueue:
         heapq.heappush(self.queue, (priority, value))
     
     def dequeue(self):
-        return heapq.heappop(self.queue)[1] if self.queue else None
+        if self.queue:
+            item = heapq.heappop(self.queue)
+            return item[1]
+        else:
+            return None
 
+
+pq = PriorityQueue()
+
+pq.enqueue(100, priority=3)
+pq.enqueue(200, priority=1)
+pq.enqueue(300, priority=2)
+pq.enqueue(400, priority=5)
+pq.enqueue(500, priority=0)
+
+print("Dequeue:", pq.dequeue())
+print("Dequeue:", pq.dequeue())
+print("Dequeue:", pq.dequeue())
+print("Dequeue:", pq.dequeue())
+print("Dequeue:", pq.dequeue())
+print("Dequeue:", pq.dequeue())
