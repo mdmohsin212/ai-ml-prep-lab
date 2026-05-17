@@ -1,10 +1,9 @@
-prices = [7,1,5,3,6,4]
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        ans = 0
 
-buy = float("inf")
-sell = 0
-
-for price in prices:
-    buy = min(buy, price)
-    sell = max(sell, price - buy)
+        for i in range(1, len(prices)):
+            if prices[i] > prices[i - 1]:
+                ans += prices[i] - prices[i-1]
         
-print(sell)
+        return ans
