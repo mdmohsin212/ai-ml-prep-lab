@@ -5,3 +5,5 @@ def subarray(nums: list[int]) -> int:
         best = max(best, current)
     return best
 
+a = [3, 2, 1, 7, 9, 2]
+print(subarray(a))
